@@ -7,11 +7,15 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
-
+import datetime
 
 ###
 # Routing for your application.
 ###
+
+def format_date_joined():
+    today_date=datetime.date(2022, 2, 9)
+    return today_date.strftime("%B, %Y")
 
 @app.route('/')
 def home():
@@ -22,7 +26,13 @@ def home():
 @app.route('/about/')
 def about():
     """Render the website's about page."""
-    return render_template('about.html', name="Mary Jane")
+    return render_template('about.html', name="Shenor Anglin")
+
+
+@app.route('/profile/')
+def profile ():
+    """Render my profile page"""
+    return render_template('profile.html',joined_date=format_date_joined())
 
 
 ###

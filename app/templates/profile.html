@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div class="card_c">
+    <div class ="b1">
+        <br>
+        <br>
+        <img src="{{ url_for('static', filename='shen.jpg') }}">
+        <br>
+        <br>
+        <div class ="personal">
+            <p class ="name">Shenor Anglin</p>
+            <p class ="username">@shenagn</p>
+            <p class ="d_joined">Joined {{joined_date}}</p>
+        </div>
+    </div>
+
+    <div class ="b2">
+        <p class="bio">You Are Original and Innovative
+        You are very open, you communicate well, and you connect with other people easily.
+        You are a naturally creative person and ideas just flow from your mind.
+        A true chameleon, you are many things at different points in your life; you are very adaptable.
+    
+        You are truly an original person. You have amazing ideas, and the power to carry them out.
+        Success does not come very easy for you... but you weather any and every storms.
+        Some people find you to be selfish and a bit overbearing, but never forget that you're a strong person.
+    
+        You are usually the best at everything because you strive for perfection. 
+        You are confident, authoritative, and aggressive. 
+        You have the classic "Type A" personality.
+        </p>
+        <br>
+        <br>
+        <div class="pff">
+            <p class="numbers">7 70 700</p>
+            <p class="n_caption">Posts Following Followers</p>
+        </div>
+        <button type="button">Follow</button>
+    </div>
+
+</div>
+{% endblock %}
